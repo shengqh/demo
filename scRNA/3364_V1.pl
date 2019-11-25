@@ -11,7 +11,7 @@ my $def = {
   task_name => "AG3364",
 
   email      => "quanhu.sheng.1\@vumc.org",
-  target_dir => create_directory_or_die("Z:/shengq1/scRNA_demo/V01"),
+  target_dir => create_directory_or_die("Z:/shengq1/scRNA_demo/3364/3364_V01"),
 
   #docker_command => "singularity exec /scratch/cqs/softwares/singularity/cqs-rnaseq.simg ",
 

@@ -11,7 +11,7 @@ my $def = {
   task_name => "AG3364",
 
   email      => "quanhu.sheng.1\@vumc.org",
-  target_dir => create_directory_or_die("Z:/shengq1/scRNA_demo/V03"),
+  target_dir => create_directory_or_die("Z:/shengq1/scRNA_demo/3364/3364_V02"),
 
   #docker_command => "singularity exec /scratch/cqs/softwares/singularity/cqs-rnaseq.simg ",
 
@@ -30,18 +30,15 @@ my $def = {
   mt_cutoff           => 20,
   Mtpattern           => "^MT-|^Mt-|^mt-",
   rRNApattern         => "^Rp[sl][[:digit:]]|^RP[SL][[:digit:]]",
-  Remove_Mt_rRNA      => "FALSE",
-  resolution          => 0.8,
   pca_dims            => 20,
   species             => "Hs",
   
   markers_file => "Z:/shengq1/scRNA/PanglaoDB_markers_21_Oct_2019.tsv",
-  
-  #different to V1
+
+  #option changed
   Remove_Mt_rRNA      => "TRUE", 
   resolution          => 0.5,
   perform_scRNABatchQC => 0,
-  "Details.Rmd"    => "Z:/shengq1/scRNA_demo/Details.Rmd", 
 };
 
 my $config = performScRNASeq( $def, 1 );
